@@ -75,7 +75,7 @@ select {
 }
 .block-welcome {
   @include paddingGlobal();
- 
+
   .nav-bar {
     display: flex;
     flex-direction: row;
@@ -96,7 +96,7 @@ select {
       flex-direction: row;
       justify-content: space-between;
       width: 752px;
-      p {
+      > p {
         font-family: Rubik;
         font-style: normal;
         font-weight: 500;
@@ -107,7 +107,7 @@ select {
         transition: 0.3s;
         cursor: pointer;
       }
-      p:hover {
+      > p:hover {
         opacity: 1;
       }
     }
@@ -179,8 +179,7 @@ select {
     }
     .buttons {
       margin-top: 5.6vh;
-     
-      
+
       .btn-hover {
         width: 315px;
         font-family: Rubik;
@@ -221,6 +220,112 @@ select {
         );
         box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
       }
+    }
+  }
+}
+.block-will {
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50vh;
+  > h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 122%;
+    color: #2c2c2c;
+    > span {
+      color: #5538e0;
+    }
+    margin-bottom: 2px;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 33px;
+    > div {
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background-color: #5538e0;
+    }
+    > p {
+      text-align: center;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 122%;
+      color: #2c2c2c;
+      margin-left: 13px;
+    }
+  }
+}
+
+.block-because {
+  margin-top: 26.5vh;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  > h1 {
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 122%;
+    color: #2c2c2c;
+  }
+  > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    > div:nth-child(1) > h2 {
+      color: #5538e0;
+    }
+    > div:nth-child(2) > h2 {
+      color: #f89e42;
+    }
+    > div:nth-child(3) > h2 {
+      color: #d35b60;
+    }
+    > div:nth-child(4) > h2 {
+      color: #19bf6f;
+    }
+    > div {
+      margin-top: 84px;
+      > h2 {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 96px;
+        line-height: 96px;
+        width: 150px;
+      
+      }
+      > div {
+        > h3 {
+          font-family: Rubik;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 43px;
+          color: #2c2c2c;
+        }
+        > p {
+            margin-top: 9px;
+          font-family: Rubik;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 30px;
+          line-height: 36px;
+          color: #2c2c2c;
+        }
+      }
+      display: flex;
+      flex-direction: row;
+      width: 50%;
     }
   }
 }
