@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+@mixin paddingGlobal {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.block-welcome {
+  @include paddingGlobal();
+ 
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 7.5vh;
+    .plug {
+      width: 93px;
+    }
+    .logo {
+      width: 93px;
+      height: 54px;
+      background-image: url(../images/welcome_block/logo.png);
+    }
+    .nav-btn {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 752px;
+      p {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        color: #1d262d;
+        opacity: 0.5;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      p:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .main {
+    margin-top: 16.1vh;
+    .text-anim {
+      h1:nth-child(1) {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 122%;
+        text-transform: uppercase;
+        color: #1d262d;
+      }
+      h1:nth-child(2) {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 122%;
+        text-transform: uppercase;
+        color: #1d262d;
+        opacity: 0.47;
+      }
+      h1:nth-child(3) {
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 39px;
+        line-height: 122%;
+        text-transform: uppercase;
+        color: #1d262d;
+        opacity: 0.35;
+      }
+    }
+    .text-desc {
+      margin-top: 5.2vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow: hidden;
+      div {
+        width: 5px;
+        height: 81px;
+        background-color: #2c2c2c;
+      }
+      p {
+        margin-left: 26px;
+        animation-name: leftToRight;
+        animation-duration: 1.5s;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 36px;
+        color: #2c2c2c;
+        opacity: 0.75;
+      }
+      @keyframes leftToRight {
+        from {
+          margin-left: -100%;
+        }
+        to {
+          margin-left: 26px;
+        }
+      }
+    }
+    .buttons {
+      margin-top: 5.6vh;
+     
+      
+      .btn-hover {
+        width: 315px;
+        font-family: Rubik;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 104%;
+        letter-spacing: 0.105em;
+        color: #ffffff;
+        cursor: pointer;
+        height: 77px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 9px;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+      .btn-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+      .btn-hover:focus {
+        outline: none;
+      }
+      .btn-hover.color {
+        background-image: linear-gradient(
+          to right,
+          #667eea,
+          #764ba2,
+          #6b8dd6,
+          #8e37d7
+        );
+        box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+      }
+    }
+  }
+}
